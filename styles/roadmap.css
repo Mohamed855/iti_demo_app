@@ -1,0 +1,11 @@
+#title {
+    text-align: center;
+    color: red;
+}
+main p span a, main h2{
+    color: red;
+}
+section {
+    display: inline-block;
+    width:49%;
+}

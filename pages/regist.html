@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link style sheet-->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/regist.css">
+    <title>Registration form</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="../index.html">
+                    <li>Home</li>
+                </a>
+                <a href="roadmap.html">
+                    <li>Road Map</li>
+                </a>
+                <a href="#">
+                    <li>Registration Form</li>
+                </a>
+                <a href="https://www.iti.gov.eg/iti/home">
+                    <li>Contact</li>
+                </a>
+            </ul>
+            <a href="https://www.iti.gov.eg/iti/home"><img src="../imgs/logo.png" alt="ITI logo"></a>
+        </nav>
+    </header>
+    <main>
+        <p id="form_title">Register - Create Account</p>
+        <div id="hint">
+            <p>Field marked with <span>*</span> are Compulsory fields</p>
+        </div>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td class="label">
+                        <label><span>*</span> Name</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="text" class="txtbx" name="name" minlength="5" maxlength="40" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label><span>*</span> Email ID</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="email" class="txtbx" name="email" placeholder="example@example.com" maxlength="60"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label>Alternate Email ID</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="email" class="txtbx" name="alt_email" maxlength="60">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label" rowspan="2">
+                        <label>Your Phone</label>
+                    </td>
+                    <td>Country Code</td>
+                    <td>City Code</td>
+                    <td>Phone Number</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="country_code" id="country_code" maxlength="5"></td>
+                    <td><input type="text" name="city_code" id="city_code" maxlength="5"></td>
+                    <td><input type="text" name="phone_num" id="phone_num" maxlength="10"></td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label>Mobile Phone</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="text" class="txtbx" name="mob_phone" placeholder="01×××××××××" minlength="11"
+                            maxlength="11">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label><span>*</span> Your Postal Address</label>
+                    </td>
+                    <td colspan="3">
+                        <textarea name="postal_address" id="postal_address" maxlength="200" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label><span>*</span> Country</label>
+                    </td>
+                    <td colspan="3">
+                        <select name="countries" id="countries" required>
+                            <option value="" selected disabled>-------------Select One-----------</option>
+                            <option value="egy">Egypt</option>
+                            <option value="fra">France</option>
+                            <option value="spain">Spain</option>
+                            <option value="usa">USA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label><span>*</span> Password</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="password" class="txtbx" name="pass" minlength="8" maxlength="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label><span>*</span> Re-Enter Password</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="password" class="txtbx" name="re_pass" minlength="8" maxlength="20" required>
+                    </td>
+                </tr>
+            </table>
+            <input type="checkbox" class="btn" name="license" id="license" required>
+            <span id="license_acceptance">I accept the <a href="#">Terms of use</a></span>
+            <br>
+            <input type="submit" class="btn" value="Continue >>">
+            <input type="reset" class="btn" value="Reset">
+        </form>
+    </main>
+    <footer>
+        <hr>
+        <p>Copyright 2023 by Mohamed Abdelmageed &reg;. All Rights reserved.</p>
+    </footer>
+</body>
+
+</html>
