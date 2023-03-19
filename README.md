@@ -1,2 +1,4 @@
-# iti_cms_git_first_sassion
-first lap
+# ITI demo website
+## Execute required tasks
+### using HTML, CSS and JS
+
