@@ -50,7 +50,7 @@ function sortNums() {
     var arr = [];
     for (let i = 1; i <= 5; i++) {
         do {
-            var enteredNum = prompt("Enter a number");
+            var enteredNum = prompt("Enter number " + i);
         } while (!enteredNum.match(/^\d+$/));
        arr.push(Number(enteredNum));
     }
