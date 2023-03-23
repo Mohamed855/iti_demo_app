@@ -78,8 +78,25 @@ function ajaxRequest() {
             let usersData = document.getElementById("usersData");
             let obj = JSON.parse(xhr.responseText);
 
-            for (let val in obj) {
-                usersData.innerHTML += "<tr><td>" + obj[val]["id"] + "</td><td>" + obj[val]["name"] + "</td><td>" + obj[val]["username"] + "</td><td>" + obj[val]["email"] + "</td><td>" + obj[val]["address"]["street"] + "</td><td>" + obj[val]["address"]["suite"] + "</td><td>" + obj[val]["address"]["city"] + "</td><td>" + obj[val]["address"]["zipcode"] + "</td><td>" + obj[val]["address"]["geo"]["lat"] + "</td><td>" + obj[val]["address"]["geo"]["lng"] + "</td><td>" + obj[val]["phone"] + "</td><td><a href='" + obj[val]["website"] + "' class='usersWebsiteLink'>" + obj[val]["website"] + "</a></td><td>" + obj[val]["company"]["name"] + "</td><td>" + obj[val]["company"]["catchPhrase"] + "</td><td>" + obj[val]["company"]["bs"] + "</td></tr>";
+            for (let val in obj) {;
+                let singleUserData = [
+                    obj[val]["id"],
+                    obj[val]["name"],
+                    obj[val]["username"],
+                    obj[val]["email"],
+                    obj[val]["address"]["street"],
+                    obj[val]["address"]["suite"],
+                    obj[val]["address"]["city"],
+                    obj[val]["address"]["zipcode"],
+                    obj[val]["address"]["geo"]["lat"],
+                    obj[val]["address"]["geo"]["lng"],
+                    obj[val]["phone"],
+                    obj[val]["website"],
+                    obj[val]["company"]["name"],
+                    obj[val]["company"]["catchPhrase"],
+                    obj[val]["company"]["bs"],
+                    ];
+                usersData.innerHTML += "<tr><td>" + singleUserData[0] + "</td><td>" + singleUserData[1] + "</td><td>" + singleUserData[2] + "</td><td>" + singleUserData[3] + "</td><td>" + singleUserData[4] + "</td><td>" + singleUserData[5] + "</td><td>" + singleUserData[6]+ "</td><td>" + singleUserData[7] + "</td><td>" + singleUserData[8] + "</td><td>" + singleUserData[9] + "</td><td>" + singleUserData[10] + "</td><td><a href='" + singleUserData[11] + "' class='usersWebsiteLink'>" + singleUserData[11] + "</a></td><td>" + singleUserData[12] + "</td><td>" + singleUserData[13] + "</td><td>" + singleUserData[14] + "</td></tr>";
             }
         }
     }
