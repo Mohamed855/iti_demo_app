@@ -1,8 +1,6 @@
 # ITI demo website
 ## Execute required tasks
 ### using HTML, CSS and JS
-
-# Javascript Tasks
 ## jsAssyments.html contains some javascript tasks and solutions
 
 
