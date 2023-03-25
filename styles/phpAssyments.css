@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+}
+
+form input {
+    cursor: pointer;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid;
+    border: none;
+    color: rgb(65, 65, 65);
+    margin: 5px;
+    padding: 5px;
+}
+
+form input:hover {
+    background-color: rgb(237, 227, 209);
+}
