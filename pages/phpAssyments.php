@@ -14,7 +14,7 @@
 <body>
 
     <h1>Day 1 Assyments</h1>
-    <form action="solution.php" method="post">
+    <form action="../php/solution.php" method="post">
         <input type="submit" value="PHP Info" name="task1">
         <input type="submit" value="Website Name" name="task2">
         <input type="submit" value="Server Details" name="task3">
