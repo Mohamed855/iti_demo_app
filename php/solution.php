@@ -7,23 +7,44 @@
     // objects
 
     $day1 = new Day1_assyments();
+    $day2 = new Day2_assyments();
 
     // page view 
 
-    if(isset($_POST['task1'])) {
-        echo($day1 -> phpInfo());
+    // day1 assyments view
+    if(isset($_POST['D1_task1'])) {
+        $day1 -> phpInfo();
     }
-    elseif (isset($_POST['task2'])) {
-        print_r($day1 -> websiteName());
+    elseif (isset($_POST['D1_task2'])) {
+        $day1 -> websiteName();
     }
-    elseif (isset($_POST['task3'])) {
-        print_r($day1 -> serverDetails());
+    elseif (isset($_POST['D1_task3'])) {
+        $day1 -> serverDetails();
     }
-    elseif (isset($_POST['task4'])) {
-        print_r($day1 -> divideKids());
+    elseif (isset($_POST['D1_task4'])) {
+        $day1 -> divideKids();
     }
+
+    // day2 assyments view
+    elseif (isset($_POST['D2_task1'])) {
+        $day2 -> newLinewithPHP();
+    }
+    elseif (isset($_POST['D2_task2'])) {
+        $day2 -> strFuncs();
+    }
+    elseif (isset($_POST['D2_task3'])) {
+        $day2 -> displayServer();
+    }
+    elseif (isset($_POST['D2_task4'])) {
+        $day2 -> operationsOnArray();
+    }
+    elseif (isset($_POST['D2_task5'])) {
+        $day2 -> sortAssociativeArray();
+    }
+
+    // unauthorized
     else {
-        echo "unauthorized access";
+        print "unauthorized access";
     }
 
 ?>
