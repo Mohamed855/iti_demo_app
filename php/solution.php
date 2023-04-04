@@ -8,6 +8,7 @@
 
     $day1 = new Day1_assyments();
     $day2 = new Day2_assyments();
+    $day3 = new Day3_assyments();
 
     // page view 
 
@@ -40,6 +41,14 @@
     }
     elseif (isset($_POST['D2_task5'])) {
         $day2 -> sortAssociativeArray();
+    }
+
+    // day3 assyments view
+    elseif (isset($_POST['D3_task1']) || isset($_POST['D3_task1_form'])) {
+        $day3 -> formValidate();
+    }
+    elseif (isset($_POST['D3_task2'])) {
+        $day3 -> displayArray();
     }
 
     // unauthorized

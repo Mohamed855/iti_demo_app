@@ -141,4 +141,91 @@
         }
     }
 
+    
+
+    // Day 3 Assyments
+
+    class Day3_assyments {
+
+        // task 1
+        function formValidate() {
+
+            $nameErrMsg = $emailErrMsg = $genderErrMsg = $termsErrMsg = $output = "";
+            
+            if (isset($_POST["D3_task1_form"])) {
+                if (!empty($_POST["name"])) {
+                    if (preg_match("/^([a-zA-Z' ]+)$/", $_POST["name"])) {
+                        if (!empty($_POST["email"])) {
+                            if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+                                if (!empty($_POST["gender"])) {
+                                    if (!empty($_POST["agreeTerms"])) {
+                                        $output .= "<h2>Your given values are :</h2>";
+                                        $output .= "<P>Name : ".$_POST['name']."</P>";
+                                        $output .= "<P>E-mail : ".$_POST['email']."</P>";
+                                        $output .= "<P>Group # : ".$_POST['group']."</P>";
+                                        $output .= "<P>Class details : ".$_POST['classDetails']."</P>";
+                                        $output .= "<P>Gender : ".$_POST['gender']."</P>";
+                                        $output .= "<P>Your courses are : ";
+                                        $selectedCourses = $_POST['selectedCourses'];
+                                        for ($i=0; $i < count($selectedCourses); $i++) { 
+                                            $i != count($selectedCourses) - 1 ? $output .= $selectedCourses[$i]." - " : $output .= $selectedCourses[$i];
+                                        }
+                                        $output .= "</P>";
+                                    } else {
+                                        $termsErrMsg = "You must agree to terms";
+                                    }
+                                } else {
+                                    $genderErrMsg = "Gender is required";
+                                }
+                            } else {
+                                $emailErrMsg = "Enter a valid email";
+                            }
+                        } else {
+                            $emailErrMsg = "Email is required";
+                        }
+                    } else {
+                        $nameErrMsg = "Enter a valid name";
+                    }
+                } else {
+                    $nameErrMsg = "Name is required";
+                }
+            }
+
+            include("php_D3_task1.php");
+        }
+
+        // task 2
+        function displayArray() {
+
+            $students = [
+                ['name' => 'Alaa', 'email' => 'ahmed@test.com', 'status' => 'CMS'],
+                ['name' => 'Shamy', 'email' => 'ali@test.com', 'status' => 'OS'],
+                ['name' => 'Youssef', 'email' => 'basem@test.com', 'status' => 'OS'],
+                ['name' => 'Waleid', 'email' => 'farouk@test.com', 'status' => 'CMS'],
+                ['name' => 'Rahma', 'email' => 'hany@test.com', 'status' => 'OS'],
+            ];
+
+            echo "<h1>Application name: PHP class registration</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+            <tbody>";
+                foreach ($students as $stuDetails) { 
+                    $stuDetails['status'] === "CMS"? $color = "color:red;": $color = "color:black;";
+                    echo "<tr style='".$color."'>
+                    <th>".$stuDetails['name']."</th>
+                    <th>".$stuDetails['email']."</th>
+                    <th>".$stuDetails['status']."</th></tr>";
+                }
+            echo "</tbody>
+            </table>";
+
+        }
+    }
+
 ?>
