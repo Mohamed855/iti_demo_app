@@ -228,4 +228,14 @@
         }
     }
 
+    // day 4 Assyments
+
+    class Day4_Assyments {
+
+        // task 1
+        function demoDB() {
+            include("php_D4_task1/userRegistForm.php");
+        }
+    }
+
 ?>

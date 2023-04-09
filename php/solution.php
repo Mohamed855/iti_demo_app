@@ -51,6 +51,14 @@
         $day3 -> displayArray();
     }
 
+    // day4 assyment view
+    elseif (isset($_POST['D4_task1']) 
+    || isset($_POST['submitUserForm']) 
+    || isset($_POST['addNewUser']) 
+    || isset($_POST['saveEditedDetails'])) {
+        $day4 -> demoDB();
+    }
+
     // unauthorized
     else {
         print "unauthorized access";
