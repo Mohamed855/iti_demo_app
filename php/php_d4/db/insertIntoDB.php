@@ -7,8 +7,6 @@ $email = $_POST['email'];
 $gender = $_POST['gender'] == "male"? "Male" : "Female";
 $mailStatus = isset($_POST['mailStatus'])? "Yes" : "No";
 
-$checkEmailSql = "SELECT email FROM users";
-
 $sql = "INSERT INTO users (username, email, gender, mailStatus) VALUES ('$username', '$email', '$gender', '$mailStatus')";
 
 $retval = mysqli_query($conn, $sql);

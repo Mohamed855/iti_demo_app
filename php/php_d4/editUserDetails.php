@@ -78,12 +78,6 @@ if (! $result) {
         </div>
     </form>
 
-    <script>
-        function redirectToUsersDetails() {
-            window.location.href = "php_D4_task1/usersDetails.php";
-        }
-    </script>
-
 </body>
 
 </html>

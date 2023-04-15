@@ -6,12 +6,12 @@
 
         // task 1
         function phpInfo() {
-            return phpinfo();
+            echo phpinfo();
         }
 
         // task 2
         function websiteName() {
-            return $_SERVER["SCRIPT_NAME"];
+            echo $_SERVER["SCRIPT_NAME"];
         }
 
         // task 3
@@ -21,7 +21,8 @@
             $server_port = $_SERVER["SERVER_PORT"];
             $path = __FILE__;
             $output = "Server name : $server_name <br> Server address : $server_address <br> Server port : $server_port <br> File path : $path <br>";
-            return $output;
+            
+            echo $output;
         }
 
         // task 4
@@ -46,7 +47,8 @@
                     $msg = "please enter a kid age between 1 and 12 years old";
                     break;
             }
-            return $msg;
+            
+            echo $msg;
         }
     }
 
@@ -141,8 +143,6 @@
         }
     }
 
-    
-
     // Day 3 Assyments
 
     class Day3_assyments {
@@ -191,7 +191,7 @@
                 }
             }
 
-            include("php_D3_task1.php");
+            require("php_D3_task1.php");
         }
 
         // task 2
@@ -234,7 +234,17 @@
 
         // task 1
         function demoDB() {
-            include("php_D4_task1/userRegistForm.php");
+            echo "<script>window.location.replace('php_D4_task1/userRegistForm.php')</script>";
+        }
+    }
+
+    // day 5 Assyments
+
+    class Day5_Assyments {
+
+        // task 1
+        function demoDB() {
+            echo "<script>window.location.replace('php_D5_task1/registeration.php')</script>";
         }
     }
 

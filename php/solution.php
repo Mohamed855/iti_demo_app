@@ -9,6 +9,8 @@
     $day1 = new Day1_assyments();
     $day2 = new Day2_assyments();
     $day3 = new Day3_assyments();
+    $day4 = new Day4_assyments();
+    $day5= new Day5_assyments();
 
     // page view 
 
@@ -57,6 +59,11 @@
     || isset($_POST['addNewUser']) 
     || isset($_POST['saveEditedDetails'])) {
         $day4 -> demoDB();
+    }
+
+    // day5 assyment view
+    elseif (isset($_POST['D5_task1'])) {
+        $day5 -> demoDB();
     }
 
     // unauthorized

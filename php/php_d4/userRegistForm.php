@@ -20,7 +20,7 @@ include('db/dbConnection.php');
 
 <body>
 
-    <form id="userForm" action="php_D4_task1/db/insertIntoDB.php" method="post" style="width:600px; margin:50px auto;">
+    <form id="userForm" action="db/insertIntoDB.php" method="post" style="width:600px; margin:50px auto;">
         <h2>User Registeration Form</h2>
         <hr>
         <p>Please fill this form and submit to add user record to the database</p>
@@ -61,7 +61,7 @@ include('db/dbConnection.php');
 
     <script>
         function redirectToUsersDetails() {
-            window.location.href = "php_D4_task1/usersDetails.php";
+            window.location.href = "usersDetails.php";
         }
     </script>
 
